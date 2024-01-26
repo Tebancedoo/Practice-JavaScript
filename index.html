@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica js</title>
+
+    <script>
+
+        //suma numeros
+
+        /*alert ("Bienvenido");
+        let a = Number(prompt("Ingrese un numero: "));
+        let b = Number(prompt("Ingrese otro numero: "));
+        let c = a + b;
+        console.log(c);
+        */
+
+        // numero loteria
+        let numeroIngresado = Number(prompt("Ingrese un numero entero: ")); 
+        
+        let x = Math.floor(Math.random()*10);
+
+        if (numeroIngresado == x) 
+        {
+            console.log("ha ganado");
+            //console.log(x);
+        }else {
+            console.log("vuelva a intentarlo");
+            //console.log(x);
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
