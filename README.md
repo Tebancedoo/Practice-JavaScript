@@ -1,2 +1,2 @@
 # Practice-JavaScript
-Practice using Javascript (V period)
+Practice using Javascript (V periodo)
