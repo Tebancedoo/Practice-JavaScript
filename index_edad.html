@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadoraaaaaa</title>
+    <script>
+
+        año_nacimiento = Number(prompt("Ingrese su año de nacimiento: "));
+        mes_nacimiento = Number(prompt("Ingrese su mes de nacimiento: "));
+        dia_nacimiento = Number(prompt("Ingrese su dia de nacimiento: "));
+
+        var añoActual = new Date().getFullYear();
+        var mesActual = new Date().getMonth();
+        //var fecha = new Date();
+        var diaActual = 30;
+        
+
+
+        if (mesActual <= mes_nacimiento){
+
+            var año = (añoActual - año_nacimiento) - 1;
+            var mes = (mesActual - mes_nacimiento) + 13;
+            var dia = diaActual - dia_nacimiento;
+
+            if (diaActual < dia_nacimiento){ 
+                var mes = (mesActual - mes_nacimiento) - 1;
+                var dia = (diaActual - dia_nacimiento) + 30;
+                alert("Usted tiene: " + año + " años, con " + mes + " meses y " + dia + " dias" ); 
+            }
+            else{
+                alert("Usted tiene: " + año + " años, con " + mes + " meses y " + dia + " dias" );
+            }
+            
+        }else {
+
+            var año = añoActual - año_nacimiento;
+            var mes = mesActual - mes_nacimiento;
+            var dia = diaActual - dia_nacimiento;
+            alert("Usted tiene: " + año + " años, con " + mes + " meses y " + dia + " dias" );
+        }
+
+       
+        
+
+
+
+    </script>
+</head>
+<body>
+
+    
+</body>
+</html>
