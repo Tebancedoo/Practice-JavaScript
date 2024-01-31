@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=}, initial-scale=1.0">
+    <title>Apuesta dado</title>
+    <script>
+
+        apuesta1 = Number (prompt("Cuanto desea apostar el jugador 1: "));
+        apuesta2 = Number (prompt("Cuanto desea apostar el jugador 2: "));
+        totalApuesta = apuesta1 + apuesta2;
+
+        let j1 = Math.floor(Math.random()*7);
+        let j11 = Math.floor(Math.random()*7);
+
+        let j2 = Math.floor(Math.random()*7);
+        let j22 = Math.floor(Math.random()*7);
+
+        alert("Los resultados del jugador 1 son: " + j1 + j11);
+        alert("Los resultados del jugador 2 son: " + j2 + j22);
+
+        let resultados1 = j1 + j11;
+        let resultados2 = j2 + j22;
+
+        if (resultados1 > resultados2){
+            alert ("El jugador 1 ha ganado la apuesta de: " + totalApuesta);
+        }else{
+            alert ("El jugador 2 ha ganado la apuesta de: " + totalApuesta);
+        }
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
