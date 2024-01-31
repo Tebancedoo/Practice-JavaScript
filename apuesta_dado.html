@@ -10,14 +10,17 @@
         apuesta2 = Number (prompt("Cuanto desea apostar el jugador 2: "));
         totalApuesta = apuesta1 + apuesta2;
 
-        let j1 = Math.floor(Math.random()*7);
-        let j11 = Math.floor(Math.random()*7);
+        let j1 = Math.floor(Math.random()*6+1);
+        let j11 = Math.floor(Math.random()*6+1);
 
-        let j2 = Math.floor(Math.random()*7);
-        let j22 = Math.floor(Math.random()*7);
+        let j2 = Math.floor(Math.random()*6+1);
+        let j22 = Math.floor(Math.random()*6+1);
 
-        alert("Los resultados del jugador 1 son: " + j1 + j11);
-        alert("Los resultados del jugador 2 son: " + j2 + j22);
+        console.log(j1,j11);
+        console.log(j2,j22);
+
+        alert("Los resultados del jugador 1 son: " + j1 + " " + j11);
+        alert("Los resultados del jugador 2 son: " + j2 + " " + j22);
 
         let resultados1 = j1 + j11;
         let resultados2 = j2 + j22;
