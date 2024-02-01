@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>llamada</title>
+
+    <!--iniciamos js--> 
+
+    <script>
+        function llamada(p){
+            var nuevo = null
+            var pagina = new Array("Opcion1.html","Opcion2.html")
+            nuevo = window.open('','VE',width= 400,height=390,top=50,left=100)
+            nuevo.location.href=pagina[p]
+            //cerrarventana = nuevo.close()
+            
+        }
+    </script>
+</head>
+<body>
+    <form action="">
+        <input type="button" value="Opcion1" name="B1" onclick="llamada(0);"><br>
+        <input type="button" value="Opcion2" name="B2" onclick="llamada(1);"><br>
+        <input type="button" value="cerrarventana" name="B3" onclick="cerrarventana();"><br>
+    </form>
+</body>
+</html>
