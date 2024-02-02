@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function limita(maximoCaracteres){
+        var elemento = document.getElementById("texto");
+        if (elemento.value.length >= maximoCaracteres)
+        {
+            return false;
+            
+        }else{
+            return true;
+        }
+    }
+</script>
+
+    <form>
+        <input type="text" name="txt1" id="texto" onkeypress="return limita(5);">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuario y Contraseña</title>
+
+    <script>
+
+    function limita(){
+	    var texto = document.getElementById("texto");
+        var contraseña = document.getElementById("contraseña");
+	    if (contraseña.value.length <= 8){
+		    alert("La contraseña debe tener mas de 8 caracteres");
+            
+	    }else{
+            var texto = document.getElementById("texto").value;
+            var contraseña = document.getElementById("contraseña").value;
+		    if (texto=="draco" && contraseña=="123456789") {
+                alert("Redirigiendo");
+                window.location.href = "menu_principal.html";
+            }else{
+                alert("Usuario o contraseña incorrecta");
+            }
+	    }
+    }
+
+    </script>
+</head>
+<body>
+
+    <form>
+        
+        <input type="text" name="txt1" id="texto" placeholder="Ingrese su usuario" ><br><br>
+        <input type="password" name="txt2" id="contraseña" placeholder="Ingrese su Contraseña" ><br><br>
+        <input type="submit" name="Enviar" id="enviar" onclick="limita();"><br><br>
+
+    </form>
+    
+</body>
+</html>
