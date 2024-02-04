@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>expresiones regulares</title>
+    <script>
+        const texto = 'Un oso rapido';
+        const palabra = /\w+$/; //busca la ultima palabra de una oracion
+        console.log(texto.match(palabra));
+        alert(texto.match(palabra));
+
+        const texto2 = 'Luna';
+        const busca = /\bL/;// Busca la L en la palabra luna
+        alert(texto2.match(busca));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
