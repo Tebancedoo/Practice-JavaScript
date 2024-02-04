@@ -12,8 +12,11 @@ img{
     height: 100px;
     width: 100px;
 }
-.muñeco{
-    text-align: center;
+
+img{
+    position: absolute; 
+    top: 45%;
+    right: 50%;
 }
 .botones{
     

@@ -8,22 +8,25 @@
     <link rel="stylesheet" href="style.css">
     <script>
 
+        const imagen = document.getElementById('imagenM');
+        console.log(imagen);
 
+        //https://www.youtube.com/watch?v=p82y9nYduCY
     </script>
 </head>
 <body>
     <main>      
 
-        <div class="Muñeco">
-            <img src="muñeco_palo.jpg" />
+        <div class="muñeco">
+            <img id="imagenM" src="muñeco_palo.jpg"  />
         </div>
 
             <div class="botones"> 
                 <form action="">
-                    <input class="b1" type="button" value="Subir" name="B1" onclick="Subir();"><br>
-                    <input class="b2" type="button" value="Bajar" name="B2" onclick="Bajar();"><br>
-                    <input class="b3" type="button" value="Izquierda" name="B3" onclick="Izquierda();"><br>
-                    <input class="b4" type="button" value="Derecha" name="B4" onclick="Derecha();"><br>
+                    <input class="b1"  type="button" value="Subir" name="B1" onclick="Subir();"><br>
+                    <input class="b2"  type="button" value="Bajar" name="B2" onclick="Bajar();"><br>
+                    <input class="b3"  type="button" value="Izquierda" name="B3" onclick="Izquierda();"><br>
+                    <input class="b4"  type="button" value="Derecha" name="B4" onclick="Derecha();"><br>
                 </form>
             </div>
     </main>
