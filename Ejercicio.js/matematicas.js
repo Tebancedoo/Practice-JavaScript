@@ -13,12 +13,20 @@ function dividir(x1,x2){
     if(x2==0){
         mostrarErrorDivision();
     }else{
-        return x1/x2
+        return x1/x2;
     }
 }
 
 function potencia(x1,x2){
-    return x1 ** x2;
+
+    x = 1;
+
+    for (i = 1; i <= x2; i++) {    
+        x = x * x1;
+        
+      }
+
+    return x;
      
 }
 //funcion en caso de que se multipique por cero 
