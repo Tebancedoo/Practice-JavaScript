@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+
+    <script>
+        function leerDatos() {
+
+            var nombre = document.querySelector("#b1").value;
+            var apellido = document.querySelector("#b2").value;
+            var edad = document.querySelector("#b3").value;
+
+            var persona = {
+                Nombre: "Juan",
+                Apellido: "Gonzales",
+                Edad: 20   
+            };
+
+            var temporal = {
+                Nombre: nombre,
+                Apellido: apellido,
+                Edad: edad   
+            };
+
+            persona.push(temporal);
+            
+        };
+
+
+
+
+
+    </script>
+
+</head>
+<body>
+
+    <form >
+    <input placeholder="Ingrese su nombre" required id="b1"><br><br>
+    <input placeholder="Ingrese su apeliido" required id="b2"><br><br>
+    <input placeholder="Ingrese su edad" type="number" required id="b3"><br><br>
+    <input value="Enviar" type="submit" onclick="leerDatos()"><br><br>
+    </form>
+    
+</body>
+</html>
