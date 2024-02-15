@@ -3,8 +3,7 @@ var mysql = require('mysql');
 var express = require("express");
 var app = express();
 
-//app.use(express.json());
-
+app.use(express.json());
 
 var con = mysql.createConnection({
     host: "localhost",
@@ -13,19 +12,18 @@ var con = mysql.createConnection({
     database: "mydb"
 })
 
-app.post('/agregar', (request, response) => {
-   const {name, adress} = request.body;
+app.post('/agregar', (req, res) => {
+   const {name, adress} = req.body;
    
     con.query("INSERT INTO customers (name, adress) VALUES (?,?)", 
     [name,adress],
     (error,results) => {
         if(error)
         throw error;
-    response.status(200).json({"Item añadido correctamente": results.affectedRows});
+    res.status(200).json({"Item añadido correctamente": results.affectedRows});
 
     });
 });
-
 
 app.listen(8080, function(){
     console.log("Servidor activo")

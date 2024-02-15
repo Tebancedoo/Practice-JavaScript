@@ -9,12 +9,13 @@ var conexion = mysql.createConnection({
     database: "mydb"
 })
 
-app.put('/actualizar/:id', (req,res) =>{
-    const {id_producto} = req.params
+
+/*app.put('/actualizar/:id', (req,res) =>{
+    const {id} = req.params
     const {codigo_producto, nombre_producto, id_categoria, documento_creador, precio_producto, id_estado} = req.body
 
     const query = `UPDATE productos SET codigo_producto = '${codigo_producto}', nombre_producto = '${nombre_producto}', id_categoria = '${id_categoria}', documento_creador = '${documento_creador}',
-    precio_producto = '${precio_producto}', id_estado = '${id_estado}' WHERE id_producto = '${id_producto}';`
+    precio_producto = '${precio_producto}', id_estado = '${id_estado}' WHERE id_producto = '${id}';`
 
     console.log(query)
 
@@ -24,8 +25,9 @@ app.put('/actualizar/:id', (req,res) =>{
         res.json('Se actualizo correctamente el producto')
     })
 })
+*/
 
-app.put('/actualizar1/:id', (request,response) =>{
+/*app.put('/actualizar1/:id', (request,response) =>{
     const id = request.params.id;
     const {codigo_producto, nombre_producto, id_categoria, documento_creador, precio_producto, id_estado} = request.body
     
@@ -34,14 +36,25 @@ app.put('/actualizar1/:id', (request,response) =>{
     (error,results) => {
     if(error)
         throw error;
-    response.status(201).jsont({"Datos actualizados":results.affectedRows, "id": id,});
+    response.status(201).json({"Datos actualizados":results.affectedRows, "id": id,});
     });
 
+});*/
+
+app.use(express.json());
+
+app.put('/actualizar/:id', (req, res)=>{
+    const {id}=req.params;
+    const {codigo_producto, nombre_producto, id_categoria, documento_creador, precio_producto, id_estado} = req.body;
+
+    
+    const query = `UPDATE productos SET codigo_producto = ?, nombre_producto = ?, id_categoria = ?, documento_creador = ?, precio_producto = ?, id_estado = ? WHERE id_producto = ?`;
+    conexion.query(query, [codigo_producto, nombre_producto, id_categoria, documento_creador, precio_producto, id_estado, id], (error) => {
+        if(error) return console.log(error.message);
+
+        res.json('Se actualizo correctamente el producto');
+    });
 });
-
-
-
-
 
 app.listen(8080, function(){
     console.log("Servidor activo")
