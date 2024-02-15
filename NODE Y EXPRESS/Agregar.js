@@ -25,6 +25,20 @@ app.post('/agregar', (req, res) => {
     });
 });
 
+
+app.post('/agregarP', (req, res) => {
+    const {id_producto,codigo_producto,nombre_producto,id_categoria,documento_creador,precio_producto,id_estado} = req.body;
+    
+     con.query("INSERT INTO productos (id_producto, codigo_producto, nombre_producto, id_categoria, documento_creador, precio_producto, id_estado) VALUES (?,?,?,?,?,?,?)", 
+     [id_producto,codigo_producto,nombre_producto,id_categoria,documento_creador,precio_producto,id_estado],
+     (error,results) => {
+         if(error)
+         throw error;
+     res.status(200).json({"Item añadido correctamente": results.affectedRows});
+ 
+     });
+ });
+
 app.listen(8080, function(){
     console.log("Servidor activo")
 })
